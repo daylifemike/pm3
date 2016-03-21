@@ -1,3 +1,5 @@
+; https://github.com/clojure/clojurescript/wiki/Compiler-Options
+
 (defproject photomosaic "0.3.0-SNAPSHOT"
   :description "Gallery layouts - available as a JS plugin and for WordPress."
   :url "https://github.com/daylifemike/photomosaic"
@@ -31,10 +33,11 @@
                         ; :source-paths ["src/main/cljs" "devsrc"]
                         ; :resource-paths ["src/main/webapp/js/lib"]
                         :compiler {
-                                   :output-to "resources/public/main.js"
-                                   ; :output-to "../wordpress/wp-content/plugins/pm3/"
-                                   :output-dir "resources/public/out"
-                                   ; :output-dir "../wordpress/wp-content/plugins/pm3/out"
+                                   ; :output-to "resources/public/main.js"
+                                   :output-to "main.js"
+                                   ; :output-dir "resources/public/out"
+                                   :output-dir "out"
+                                   :output-wrapper true
                                    :compiler-stats true
                                    :optimizations :none
                                    ; :recompile-dependents false
