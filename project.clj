@@ -24,14 +24,17 @@
             [cider/cider-nrepl "0.9.1"]
             ]
   :source-paths ["src"]
-  :clean-targets ["dist"]
+  ; :clean-targets ["dist"]
   ; :jvm-opts ^:replace ["-Xmx1g" "-server"]
   :cljsbuild {:builds [{:id "dev"
                         :source-paths ["src/cljs"]
                         ; :source-paths ["src/main/cljs" "devsrc"]
                         ; :resource-paths ["src/main/webapp/js/lib"]
-                        :compiler {:output-to "resources/public/main.js"
+                        :compiler {
+                                   :output-to "resources/public/main.js"
+                                   ; :output-to "../wordpress/wp-content/plugins/pm3/"
                                    :output-dir "resources/public/out"
+                                   ; :output-dir "../wordpress/wp-content/plugins/pm3/out"
                                    :compiler-stats true
                                    :optimizations :none
                                    ; :recompile-dependents false

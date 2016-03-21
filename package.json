@@ -1,0 +1,12 @@
+{
+    "name": "pm3",
+    "version": "0.0.0",
+    "description": "PhotoMosaic v3",
+    "author": "Michael Kafka",
+    "devDependencies": {
+        "grunt": "^0.4.4",
+        "grunt-contrib-clean": "^0.5.0",
+        "grunt-contrib-copy": "^0.5.0",
+        "grunt-contrib-watch": "^0.6.1"
+    }
+}
