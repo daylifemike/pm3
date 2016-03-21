@@ -36,7 +36,7 @@
                                    ; :output-to "resources/public/main.js"
                                    :output-to "main.js"
                                    ; :output-dir "resources/public/out"
-                                   :output-dir "out"
+                                   ; :output-dir "out"
                                    :output-wrapper true
                                    :compiler-stats true
                                    :optimizations :none
@@ -48,6 +48,19 @@
                                               :fn-var false}}
                         :figwheel {:on-jsload "pm3.controller.app/reload"}
                         }
+                       {:id "test"
+                        :source-paths ["src/cljs"]
+                        :compiler {:output-to "main.js"
+                                   ; Uncomment these two for prod source maps
+                                   ; :output-dir "src/main/webapp/assets/javascript"
+                                   ; :source-map "src/main/webapp/assets/javascript/main.js.map"
+                                   :optimizations :none
+                                   :static-fns false
+                                   :compiler-stats true
+                                   :pretty-print false
+                                   :closure-defines {"goog.DEBUG" false}
+                                   :closure-warnings {:non-standard-jsdoc :off}}
+                        :figwheel {:on-jsload "pm3.controller.app/reload"}}
                        ; {:id "prod"
                        ;  :source-paths ["src/main/cljs"]
                        ;  :compiler {:output-to "src/main/webapp/assets/javascript/main.js"

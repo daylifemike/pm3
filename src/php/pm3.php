@@ -27,16 +27,16 @@ if ( ! defined( 'WPINC' ) ) { die; }
 // register_activation_hook( __FILE__, 'activate_plugin_name' );
 // register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
 
-// require plugin_dir_path( __FILE__ ) . 'includes/class-photomosaic.php';
+require plugin_dir_path( __FILE__ ) . 'src/php/includes/class-photomosaic3.php';
 
-// function run_photomosaic_for_wordpress() {
-//     global $photomosaic;
-//     $photomosaic = new Photomosaic();
-//     $photomosaic->run();
-// }
-// run_photomosaic_for_wordpress();
+function run_photomosaic3_for_wordpress() {
+    global $photomosaic3;
+    $photomosaic3 = new Photomosaic3();
+    $photomosaic3->run();
+}
+run_photomosaic3_for_wordpress();
 
-// // Template Tag
+// Template Tag
 // function wp_photomosaic( $atts ){
 //     global $photomosaic;
 
